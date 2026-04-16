@@ -7,12 +7,12 @@
 }
 
 .header {
+    font-size: 18px;
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
     height: 293px;
     padding: 50px;
-    font-size: 18px;
 }
 
 .header_menu-list {
@@ -30,14 +30,14 @@
 .header_menu-item_with-marker::before {
   content: '';
   position: absolute;
-  left: -20px;    
+  left: -20px;
   top: 50%;
   transform: translateY(-50%);
   width: 6px;
   height: 6px;
   border: 1px solid #000;
   border-radius: 50%;
-  background-color: transparent; 
+  background-color: transparent;
 }
 
 .header__logo {
@@ -50,6 +50,7 @@
 }
 
 .header__address-list {
+    font-style: normal;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -57,7 +58,6 @@
     padding-left: 192px;
     padding-bottom: 3px;
     padding-right: 10px;
-    font-style: normal;
 }
 
 section {
@@ -207,8 +207,8 @@ section {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-decoration-color: white;
-    text-underline-offset: 2px; 
-    line-height: 1.2; 
+    text-underline-offset: 2px;
+    line-height: 1.2;
 }
 
 .frames__article {
