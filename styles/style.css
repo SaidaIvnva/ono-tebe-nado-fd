@@ -11,33 +11,33 @@
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    height: 293px;
+    min-height: 293px;
     padding: 50px;
 }
 
 .header_menu-list {
-    list-style: none;
+    list-style: circle;
     display: flex;
     flex-direction: row;
-    gap: 33px;
-    padding-bottom: 3px;
+    gap: 30px;
+    padding-bottom: 4px;
+}
+
+.header_menu-item:first-child::marker {
+  content: '';
+}
+
+.header_menu-item:not(:first-child) {
+  list-style: circle;
+  padding-left: 3px; 
 }
 
 .header_menu-item {
   position: relative;
 }
 
-.header_menu-item_with-marker::before {
-  content: '';
-  position: absolute;
-  left: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  border: 1px solid #000;
-  border-radius: 50%;
-  background-color: transparent;
+.header_menu-item {
+  position: relative;
 }
 
 .header__logo {
@@ -66,15 +66,15 @@ section {
 
 .cover {
     min-height: 757px;
-    background-image: url('/images/cover.jpg');
+    background-image: url('../images/cover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: -137px;
+    background-position: center;
 }
 
 .overlay {
     background-color: #000;
-    min-height: 757px;
+    height: 100%;
     opacity: 60%;
     position: absolute;
     left: 0;
@@ -87,7 +87,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 30%;
     font-size: 100px;
-    position: absolute;
+    position: relative;
     z-index: 1000;
     width: 100%;
     padding-top: 164px;
@@ -113,9 +113,9 @@ section {
 }
 
 .cover__description {
-    position: absolute;
+    position: relative;
     z-index: 1000;
-    top: 656px;
+    top: 106px;
     display: flex;
     justify-content: space-between;
     width: 1000px;
@@ -135,7 +135,7 @@ section {
 
 .bet-button {
     width: 256px;
-    height: 51px;
+    min-height: 51px;
     border: 1px solid white;
     background: transparent;
     color: white;
@@ -143,6 +143,7 @@ section {
     font-size: 22px;
     font-weight: normal;
     display: inline-block;
+    cursor: pointer;
 }
 
 .lot__title {
@@ -154,56 +155,53 @@ section {
     margin-top: 180px;
 }
 
+.card-list li a {
+    text-decoration: none;
+}
+
 .card-list {
     list-style: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 25px;
+    margin-right: 0;
+    margin-bottom: 25px;
 }
 
 .card {
-    height: 596px;
+    min-height: 596px;
     width: 334px;
     position: relative;
     left: 24px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: -115px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px;
 }
 
-.frame__first {
-    background-image: url(/images/card-lot-01.jpg);
+.card_type_film {
+    background-image: url(../images/card-lot-01.jpg);
 }
 
-.frame__second {
-    background-image: url(/images/card-lot-02.jpg);
+.card_type_book {
+    background-image: url(../images/card-lot-02.jpg);
 }
 
-.frame__third {
-    background-image: url(/images/card-lot-03.jpg);
-}
-
-.fram_overlay {
-    background-color: #000;
-    height: 100%;
-    opacity: 60%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+.card_type_picture {
+    background-image: url(../images/card-lot-03.jpg);
 }
 
 .frames__title {
     text-transform: uppercase;
     color: white;
-    position: absolute;
+    position: relative;
     z-index: 1000;
     font-size: 22px;
     font-weight: bold;
-    left: 40px;
-    right: 40px;
-    top: 48px;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-decoration-color: white;
@@ -213,14 +211,11 @@ section {
 
 .frames__article {
     color: white;
-    position: absolute;
+    position: relative;
     z-index: 1000;
     font-size: 20px;
     font-weight: 400;
     font-style: normal;
-    left: 40px;
-    right: 40px;
-    bottom: 50px;
     line-height: 1.2;
 }
 
@@ -278,7 +273,7 @@ section {
 }
 
 .footer {
-    height: 180px;
+    min-height: 180px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 180px;
