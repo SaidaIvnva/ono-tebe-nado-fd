@@ -11,8 +11,10 @@
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    min-height: 293px;
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 93px;
+    padding-bottom: 90px;
 }
 
 .header_menu-list {
@@ -23,17 +25,13 @@
     padding-bottom: 4px;
 }
 
-.header_menu-item:first-child::marker {
+.header_menu-item:first-child {
   content: '';
 }
 
 .header_menu-item:not(:first-child) {
   list-style: circle;
   padding-left: 3px; 
-}
-
-.header_menu-item {
-  position: relative;
 }
 
 .header_menu-item {
@@ -80,7 +78,7 @@ section {
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1;
 }
 
 .cover__title {
@@ -88,7 +86,7 @@ section {
     letter-spacing: 30%;
     font-size: 100px;
     position: relative;
-    z-index: 1000;
+    z-index: 2;
     width: 100%;
     padding-top: 164px;
     padding-left: 50px;
@@ -114,7 +112,7 @@ section {
 
 .cover__description {
     position: relative;
-    z-index: 1000;
+    z-index: 2;
     top: 106px;
     display: flex;
     justify-content: space-between;
@@ -155,25 +153,33 @@ section {
     margin-top: 180px;
 }
 
-.card-list li a {
-    text-decoration: none;
-}
-
 .card-list {
     list-style: none;
+    padding-left: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 25px;
-    margin-right: 0;
     margin-bottom: 25px;
+    margin-left: 24px;
+}
+
+.card-list li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.card-list a {
+  text-decoration: none;
 }
 
 .card {
     min-height: 596px;
     width: 334px;
     position: relative;
-    left: 24px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -199,7 +205,7 @@ section {
     text-transform: uppercase;
     color: white;
     position: relative;
-    z-index: 1000;
+    z-index: 2;
     font-size: 22px;
     font-weight: bold;
     text-decoration: underline;
@@ -207,16 +213,18 @@ section {
     text-decoration-color: white;
     text-underline-offset: 2px;
     line-height: 1.2;
+    margin: 0;
 }
 
 .frames__article {
     color: white;
     position: relative;
-    z-index: 1000;
+    z-index: 2;
     font-size: 20px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.2;
+    margin: 0;
 }
 
 .more {
